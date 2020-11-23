@@ -92,9 +92,9 @@ if __name__=="__main__":
     
 
     #######  Show an overview of the data (1.a) ##########
-    overview = User_Overview()
-    overview.set_users_df( users_df )
-    overview.show()
+    # overview = User_Overview()
+    # overview.set_users_df( users_df )
+    # overview.show()
 
 
 

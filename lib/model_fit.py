@@ -1,3 +1,4 @@
+from lib.util import StepResult
 import numpy as np
 import time as TIME
 import pandas as pd
@@ -62,7 +63,17 @@ class Individual_Model_Fitting( object ):
         # Methods: action_prob() and update_model() of Model (model_interface.py)
         # Data structures: StepResult and Action from util.py
         #  
-        
+        #
+        for i,(cmd, time, success, action) in enumerate(zip(self.user_input, self.user_output.time, self.user_output.success, self.user_output.action)):
+            prob = self.model.action_prob( cmd, action)
+            res.prob[i] = prob
+            step = StepResult() 
+            step.cmd = cmd
+            step.success = success
+            step.time = time
+            step.action = action
+            self.model.update_model( step )
+       
         res.time = TIME.time() - start
         return res
 
