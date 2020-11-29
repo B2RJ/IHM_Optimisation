@@ -44,8 +44,7 @@ def soft_max(beta, vec):
 #    -  a float: \sum_t ( log( P_t ) )                                 #
 ########################################################################
 def log_likelihood( prob_vec ):
-    return 1 #TODO 3.b (1 line of code)
-    
+    return np.sum(np.log(prob_vec))
 
 
 ########################################################################
@@ -58,7 +57,7 @@ def log_likelihood( prob_vec ):
 #    -  log(n) * k - 2 likelihood                                      #
 ########################################################################
 def bic_score( n_observations, k_parameters, likelihood ):
-    return 1 #TODO 3.b (1 line of code)
+    return np.log(n_observations) * k_parameters - 2 * likelihood
 
 
 

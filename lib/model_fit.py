@@ -54,7 +54,8 @@ class Individual_Model_Fitting( object ):
     ########################################################################
     def run_debug( self ):
         start = TIME.time()
-        res = Fit_Output_Debug( len( self.command_sequence ) )
+        #res = Fit_Output_Debug( len( self.command_sequence ) )
+        res = Fit_Output_Debug( len( self.user_input)) #Code du prof
 
         # TODO 3.a ( 4 lines of code )
         # For each command command of the sequence, estimate the probabily
@@ -64,7 +65,7 @@ class Individual_Model_Fitting( object ):
         # Data structures: StepResult and Action from util.py
         #  
         #
-        for i,(cmd, time, success, action) in enumerate(zip(self.user_input, self.user_output.time, self.user_output.success, self.user_output.action)):
+        for i,(cmd, time, success, action) in enumerate( zip(self.user_input, self.user_output.time, self.user_output.success, self.user_output.action)):
             prob = self.model.action_prob( cmd, action)
             res.prob[i] = prob
             step = StepResult() 
