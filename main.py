@@ -113,15 +113,15 @@ if __name__=="__main__":
     ##############################################################
     ######           Model fitting  (TODO 3.c)          ##########
     ##############################################################
-    model_fitting  = Model_Fitting()
-    model_fitting.debug = True
-    model_fitting.command_ids   = range(0,14)    # 14 commands
-    model_fitting.user_data_vec = user_data_vec
-    model_fitting.model_vec     = model_vec
-    fitting_res = model_fitting.run()            # res: list < Model_Result > ( see util.py )
+    # model_fitting  = Model_Fitting()
+    # model_fitting.debug = True
+    # model_fitting.command_ids   = range(0,14)    # 14 commands
+    # model_fitting.user_data_vec = user_data_vec
+    # model_fitting.model_vec     = model_vec
+    # fitting_res = model_fitting.run()            # res: list < Model_Result > ( see util.py )
     # display the results
-    fitting_visu = Model_Fitting_Visualisation()
-    fitting_visu.update_canvas( fitting_res )
+    # fitting_visu = Model_Fitting_Visualisation()
+    # fitting_visu.update_canvas( fitting_res )
     
     
     
@@ -129,16 +129,16 @@ if __name__=="__main__":
     ###############################################################
     #######  Optimize parameters (TODO 4.b) ##########
     ###############################################################
-    # model_fitting       = Model_Fitting()
-    # model_fitting.debug = True
-    # model_fitting.command_ids   = range(0,14)
-    # model_fitting.user_data_vec = user_data_vec
-    # model_fitting.model_vec     = model_vec
-    # fitting_res = model_fitting.optimize()
-    # # save parameters
-    # Parameters_Export.write(fitting_res, './optimal_parameters/')
-    # print("the optimisation is done")
-    # exit(0)
+    model_fitting       = Model_Fitting()
+    model_fitting.debug = True
+    model_fitting.command_ids   = range(0,14)
+    model_fitting.user_data_vec = user_data_vec
+    model_fitting.model_vec     = model_vec
+    fitting_res = model_fitting.optimize()
+    # save parameters
+    Parameters_Export.write(fitting_res, './optimal_parameters/')
+    print("the optimisation is done")
+    exit(0)
 
 
     ###############################################################

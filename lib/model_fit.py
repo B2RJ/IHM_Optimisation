@@ -7,6 +7,7 @@ from scipy.optimize import *
 from parameters_export import *
 from util import *
 
+from scipy.optimize import differential_evolution
 
 
 ##########################################
@@ -54,8 +55,8 @@ class Individual_Model_Fitting( object ):
     ########################################################################
     def run_debug( self ):
         start = TIME.time()
-        #res = Fit_Output_Debug( len( self.command_sequence ) )
-        res = Fit_Output_Debug( len( self.user_input)) #Code du prof
+        res = Fit_Output_Debug( len( self.command_sequence ) )
+        #res = Fit_Output_Debug( len( self.user_input)) #Code du prof
 
         # TODO 3.a ( 4 lines of code )
         # For each command command of the sequence, estimate the probabily
@@ -65,7 +66,7 @@ class Individual_Model_Fitting( object ):
         # Data structures: StepResult and Action from util.py
         #  
         #
-        for i,(cmd, time, success, action) in enumerate( zip(self.user_input, self.user_output.time, self.user_output.success, self.user_output.action)):
+        for i,(cmd, time, success, action) in enumerate( zip(self.command_sequence, self.user_output.time, self.user_output.success, self.user_output.action)):
             prob = self.model.action_prob( cmd, action)
             res.prob[i] = prob
             step = StepResult() 
@@ -138,7 +139,8 @@ class Model_Fitting( object ):
                 #               i.e. the parameters of the method to minimize (self.to_minimize() )
 
                 #res = ....
-
+                
+                #res = differential_evolution(self.to_minimize(), free_param_bnds_vec, [free_param_name_vec, self.method, available_strategies])
 
                 end = TIME.time()
                 print("optmize the model: ", model.name, "on user: ", user_data.id, "in ",  end - start,"s")
