@@ -16,9 +16,36 @@ Pour les utilisateurs avec la technique traditionnel, nous constatons qu'il y a 
 
 Q3 : Quel est le meilleur modèle ? pour quels utilisateurs ? pour quelles techniques ? Faut-il que la barre soit haute ou basse ? (bien regarder l’intitulé de l’axe y et le signe de la likelihood)
 
-Faire un tableau des valeurs ci-dessous
+Le Log Likelihood est à -660 pour CK contre -780 pour random. Pour le BIC, CK obtient à nouveau un meilleur score avec 1340 contre 1560 pour le random. Pour le score BIC cela implique que même avec un paramètre supplémentaire (ce qui implique une pénalité), CK est meilleur que Random. Nous pouvons en déduire que le meilleur modèle entre les deux est CK. 
 
-Comparatif des modèles :  
+Pour l'analyse des techniques, la technique audio obtiens de meilleurs résultats avec le modèle random, mais c'est la technique traditionnelle qui est plus concluante avec le modèle CK. 
+
+Dans les deux valeurs, Log Likelihood et BIC, il est nécessaire que la barre soit basse. En effet, pour le Log Likelihood la légende est négative, la barre la plus petite représente donc la valeur la plus grande. Pour le BIC, la légende est positive mais c'est la plus petite valeur qui rapporte le meilleur score. 
+
+Q4 : Comment à évoluer la vraisemblance ? de manière absolu et relative ? Quel est maintenant le meilleur modèle ? pour quels utilisateurs ? pour quelles techniques ?
+
+On constate aisément que l'écart s'est accentué entre le modèle Random et le modèle CK. L'ensemble des valeurs s'est rapproché de 0. Le meilleure modèle reste CK. En revanche, la tendance est différente au sein des techniques. En effet, la technique traditionnel obtient des meilleurs statistiques que la technique audio et ceux, peu importe le modèle. 
+
+Maintenant : 
+
+- Log Likelihood Moyen Random : 560
+- Log Likelihood Traditionnel Random : 480
+- Log Likelihood Audio Random : 640
+
+- Log Likelihood Moyen CK : 180
+- Log Likelihood Traditionnel CK : 70
+- Log Likelihood Audio CK : 275
+
+- BIC Moyen Random : 1150
+- BIC Traditionnel Random : 970
+- BIC Audio Random : 1300
+
+- BIC Moyen CK : 340
+- BIC Traditionnel CK : 150
+- BIC Audio CK : 550
+
+Avant : 
+
 Log Likelihood random traditional : -820
 Log Likelihood random audio : -730
 Moyenne : -775
@@ -34,19 +61,3 @@ Moyenne : 1562,5
 bic CK traditional : 1300
 bic CK audio : 1370
 Moyenne : 1335
-
-
-Log Likelihood : Plus c'est haut, mieux c'est
-BIC : Plus c'est haut, moins c'est bien. 
-
-D'un point de vue général, le modèle CK semble être le meilleur, mais nous allons analyser technique par technique. 
-
-Pour la technique traditionnelle, aucune idée ce que je dois en tirer
-
-Pour la technique audio, idem 
-
-Faut-il que la barre soit haute ou basse ? 
-(Si il parle de la barre en extrémité de graphe :)
-Pour Log Likelihood, il faut que la barre soit basse, en effet, c'est une valeur négative et plus le Log Likelihood est grand, mieux c'est. 
-
-Pour le BIC, elle doit egalement est basse, car plus le BIC est petit mieux c'est. 

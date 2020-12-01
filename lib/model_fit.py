@@ -134,13 +134,12 @@ class Model_Fitting( object ):
                 # use the method differential_evolution from scipy.optimize
                 # differential_evolution has several paramaters. We will use: 
                 # - func   = self.to_minimize (the function to minimize)
-                # - bounds =  free_param_bnds_vec (the bounds ofthe model parameters)
+                # - bounds =  free_param_bnds_vec (the bounds of the model parameters)
                 # - args   = (free_param_name_vec, self.method, available_strategies )
                 #               i.e. the parameters of the method to minimize (self.to_minimize() )
 
                 #res = ....
-                
-                #res = differential_evolution(self.to_minimize(), free_param_bnds_vec, [free_param_name_vec, self.method, available_strategies])
+                res = differential_evolution( func= self.to_minimize, bounds =   free_param_bnds_vec, args   = (free_param_name_vec, self.method, available_strategies ) ) 
 
                 end = TIME.time()
                 print("optmize the model: ", model.name, "on user: ", user_data.id, "in ",  end - start,"s")
