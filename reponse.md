@@ -61,3 +61,15 @@ Moyenne : 1562,5
 bic CK traditional : 1300
 bic CK audio : 1370
 Moyenne : 1335
+
+Q5 Quel est le « meilleur modèle » ?
+
+Explication de la légende: 
+Couleur = technique
+Pointillé ou non = méthode
+
+Nous constatons ici que le meilleur modèle est le modèle random. En effet, les valeurs issues de ce modèle sont plus proches des valeurs issues des observations. 
+
+Q6 Est-ce que les modèles vous semblent bons dans l’absolu ?
+
+Dans l'absolue, aucun des deux modèles colle complètement aux observations. Les observations ont logiquement une tendance fortement croissante alors que les modèle sont plutot constants. 

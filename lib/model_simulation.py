@@ -46,7 +46,14 @@ class Model_Simulation( object ):
         #   agent_output.time[i]    = ...
         #   agent_output.success[i] = ...
         #   agent_output.action[i]  = ...
-        
+        for i, cmd in enumerate(cmd_sequence):
+            strategy = model.select_strategy(cmd)
+            action = Action(cmd, strategy[0])
+            step = model.generate_step(cmd, action)
+            agent_output.time[i]    = step.time
+            agent_output.success[i] = step.success
+            agent_output.action[i]  = step.action
+            model.update_model(step)
 
 
         t = TIME.time() - start
