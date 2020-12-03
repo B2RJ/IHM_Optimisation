@@ -67,13 +67,9 @@ class Individual_Model_Fitting( object ):
         #  
         #
         for i,(cmd, time, success, action) in enumerate( zip(self.command_sequence, self.user_output.time, self.user_output.success, self.user_output.action)):
-            prob = self.model.action_prob( cmd, action)
+            prob = self.model.action_prob(cmd, action)
             res.prob[i] = prob
-            step = StepResult() 
-            step.cmd = cmd
-            step.success = success
-            step.time = time
-            step.action = action
+            step = StepResult(cmd,action,time,success)
             self.model.update_model( step )
        
         res.time = TIME.time() - start
@@ -139,7 +135,10 @@ class Model_Fitting( object ):
                 #               i.e. the parameters of the method to minimize (self.to_minimize() )
 
                 #res = ....
-                res = differential_evolution( func= self.to_minimize, bounds =   free_param_bnds_vec, args   = (free_param_name_vec, self.method, available_strategies ) ) 
+                res = differential_evolution( 
+                        func = self.to_minimize,
+                        bounds = free_param_bnds_vec,
+                        args = (free_param_name_vec, self.method, available_strategies ) ) 
 
                 end = TIME.time()
                 print("optmize the model: ", model.name, "on user: ", user_data.id, "in ",  end - start,"s")

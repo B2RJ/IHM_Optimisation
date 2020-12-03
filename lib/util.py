@@ -57,7 +57,7 @@ def log_likelihood( prob_vec ):
 #    -  log(n) * k - 2 likelihood                                      #
 ########################################################################
 def bic_score( n_observations, k_parameters, likelihood ):
-    return np.log(n_observations) * k_parameters - 2 * likelihood
+    return (np.log(n_observations) * k_parameters) - (2 * likelihood)
 
 
 
