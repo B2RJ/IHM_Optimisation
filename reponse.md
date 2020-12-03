@@ -72,4 +72,12 @@ Nous constatons ici que le meilleur modèle est le modèle random. En effet, les
 
 Q6 Est-ce que les modèles vous semblent bons dans l’absolu ?
 
-Dans l'absolue, aucun des deux modèles colle complètement aux observations. Les observations ont logiquement une tendance fortement croissante alors que les modèle sont plutot constants. 
+Dans l'absolue, aucun des deux modèles colle complètement aux observations. Les observations ont logiquement une tendance fortement croissante alors que les modèle sont plutôt constants. 
+
+Partie 6 q6 je pense qu'il voulait dire q7
+Du point de vu, du score BIC et likelihood le modèle Rescola-Wagner est ressemblant au modèle CK. Mais en observant la simulation et les observation on constate que le modèle RW ce rapproche plus du comportement utilisateur qui a utilisé la technique audio
+Le modèle RW n'est pas bon pour prédire le comportement avec la technique traditionnel, il propose une prédiction similaire à la technique audio alors que les observations montrent que les utilisateurs  avec la technique traditionnel ne font beaucoup moins de raccourcie clavier.
+
+Partie 7 
+q8 ou q7
+La combinaison des deux modèle CK et RW permet d'amélioré les résultat, cela permet de prendre la qualité de prédiction pour la techinque traditionnel de CK et la qualité de prédiction du modèle RW pour la technique audio.
