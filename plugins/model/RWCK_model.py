@@ -48,6 +48,11 @@ class RWCK_Model( Model ):
         # TODO 7
         # Reuse the code in RW and CK to update self.Q and self.CK
         # In action_probs (below)
+        self.Q[ cmd ][ strategy ] = self.Q[ cmd ][ strategy ] + (self.ALPHA_RW * (reward - self.Q[ cmd ][ strategy ]))
+        for s in all_strategies: 
+            b = 1 if s == strategy else 0
+            self.CK[ cmd ][ s ] = self.CK[ cmd ][ s ] + self.ALPHA_CK * ( b - self.CK[ cmd ][ s ] ) 
+        
 
 
     ##########################################################################

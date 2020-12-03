@@ -43,7 +43,7 @@ class RW_Model( Model ):
         cmd    = step.cmd
         
         # TODO 6 (1 line of code)
-        #self.Q[ cmd ][ strategy ] = 
+        self.Q[ cmd ][ strategy ] = self.Q[ cmd ][ strategy ] + (self.ALPHA_RW * (reward - self.Q[ cmd ][ strategy ]))
         
 
 
