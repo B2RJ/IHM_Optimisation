@@ -33,16 +33,18 @@ Pour le model random, le Log Likelihood moyen a varié de 260 points, c'est 31% 
 Pour le model CK, le Log Likelihood moyen a varié de 480 points, ce qui représente 72% de la valeur initial. Dans le même temps, le score BIC a varié de 1220, ce qui fait une variation de 78%. 
 Peu importe que ce soit de manière absolue ou relative, le meilleur modèle est le modèle CK. 
 
-![Question4c](./images/Question4c.png)
+![Question4c](./images/question4c.png)
 
 Q5 Quel est le « meilleur modèle » ?
 
 Nous constatons ici que le meilleur modèle est le modèle random. En effet, les valeurs issues de ce modèle sont plus proches des valeurs issues des observations. 
 
-![Question5b](./images/Question5b.png)
+![Question5b](./images/question5b.png)
 
 Q6 Est-ce que les modèles vous semblent bons dans l’absolu ?
 
 Dans l'absolue, aucun des deux modèles colle complètement aux observations. Les observations ont logiquement une tendance fortement croissante alors que les modèle sont plutot constants. 
 
 Q7 Qu'apprenons nous ? Pourquoi ?
+
+ Du point de vue, du score BIC et Log Likelihood le modèle Rescola-Wagner est ressemblant au modèle CK. Mais en observant la simulation et les observation on constate que le modèle RW ce rapproche plus du comportement utilisateur qui a utilisé la technique audio
