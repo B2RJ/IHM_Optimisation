@@ -47,15 +47,10 @@ Dans l'absolue, aucun des deux modèles colle complètement aux observations. Le
 
 Q7 Qu'apprenons nous ? Pourquoi ?
 
- Du point de vue, du score BIC et Log Likelihood le modèle Rescola-Wagner est ressemblant au modèle CK. Mais en observant la simulation et les observation on constate que le modèle RW ce rapproche plus du comportement utilisateur qui a utilisé la technique audio
- 
-Partie 6 q6 je pense qu'il voulait dire q7
-Du point de vu, du score BIC et likelihood le modèle Rescola-Wagner est ressemblant au modèle CK. Mais en observant la simulation et les observation on constate que le modèle RW ce rapproche plus du comportement utilisateur qui a utilisé la technique audio
-Le modèle RW n'est pas bon pour prédire le comportement avec la technique traditionnel, il propose une prédiction similaire à la technique audio alors que les observations montrent que les utilisateurs  avec la technique traditionnel ne font beaucoup moins de raccourcie clavier.
+Du point de vue, du score BIC et Log Likelihood le modèle Rescola-Wagner est ressemblant au modèle CK. Mais en observant la simulation et les observations on constate que le modèle RW se rapproche plus du comportement utilisateur qui a utilisé la technique audio.
+Le modèle RW n'est pas bon pour prédire le comportement avec la technique traditionnelle, il propose une prédiction similaire à la technique audio alors que les observations montrent que les utilisateurs avec la technique traditionnelle font beaucoup moins de raccourcies clavier.
 
-Partie 7 
-q8 ou q7
-La combinaison des deux modèle CK et RW permet d'amélioré les résultat, cela permet de prendre la qualité de prédiction pour la techinque traditionnel de CK et la qualité de prédiction du modèle RW pour la technique audio.
-Dans l'absolue, aucun des deux modèles colle complètement aux observations. Les observations ont logiquement une tendance fortement croissante alors que les modèle sont plutot constants. 
+Partie 7
+La combinaison des deux modèles, CK et RW, permet d'améliorer les résultats, cela permet de prendre la qualité de prédiction pour la technique traditionnelle de CK et la qualité de prédiction du modèle RW pour la technique audio.
 
 

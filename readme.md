@@ -2,7 +2,7 @@
 
 ### Richard BRUNEAU - Pierre VASLIN
 
-Nous avons réalisé intégralement les parties 1 à 5. Les parties 6 et 7 sont en cours de développement. 
+Nous avons réalisé intégralement les parties 1 à 7. 
 
 ## Getting started
 
