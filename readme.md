@@ -14,5 +14,5 @@ python main.py
 
 ## Réponses 
 
-Les réponses saisies sur Tomuss sont également disponible dans le fichier [réponses](./reponses.md). 
+Les réponses saisies sur Tomuss sont également disponible dans le fichier [réponses](./reponse.md). 
 
